@@ -37,7 +37,7 @@ address | STRING | YES |钱包地址|
 type | INT | YES | 交易类型 0 为全部，1为转入 ，2为转出|
 contract_address| STRING |NO | token地址，如果传空表示区块链的token地址|
 page |INT | YES | page  页号从1开始 |
-count |INT | YES | p每页数量 |
+count |INT | YES | 每页数量 |
 wallet_name |STRING | YES | 区块链名称 |	 
 	
 **响应:**
@@ -82,7 +82,7 @@ GET /api/v1/tokens
 名称 | 类型 | 是否必须 | 描述
 ------------ | ------------ | ------------ | ------------
 page |INT | YES | page  页号从1开始 |
-count |INT | YES | p每页数量 |
+count |INT | YES | 每页数量 |
 wallet_name |STRING | YES | 区块链名称 |	
 
 **响应:**
@@ -146,7 +146,7 @@ GET /api/v1/banners
 名称 | 类型 | 是否必须 | 描述
 ------------ | ------------ | ------------ | ------------
 page |INT | YES | page  页号从1开始 |
-count |INT | YES | p每页数量 |	
+count |INT | YES | 每页数量 |	
 
 **响应:**
 	
@@ -176,9 +176,8 @@ GET /api/v1/banners
 	
 名称 | 类型 | 是否必须 | 描述
 ------------ | ------------ | ------------ | ------------
-count |INT | YES | p每页数量 |
-wallet_name |STRING | YES | 区块链名称 |	
-
+page |INT | YES | page  页号从1开始 |
+count |INT | YES | 每页数量 |
 **响应:**
 	
 	{
@@ -207,7 +206,7 @@ GET /api/v1/rpcnodes
 名称 | 类型 | 是否必须 | 描述
 ------------ | ------------ | ------------ | ------------
 page |INT | YES | page  页号从1开始 |
-count |INT | YES | p每页数量 |
+count |INT | YES | 每页数量 |
 wallet_name |STRING | YES | 区块链名称 |	
 
 **响应:**
