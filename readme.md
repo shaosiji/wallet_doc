@@ -5,6 +5,18 @@
 
 	ETH-HD 以太坊主链
 
+# 请求地址
+
+### 主域名
+```
+    https://bakewallet.io 
+```
+
+### 备用域名
+```
+    https://bakewallet.pro 
+```
+
 ## 接口错误代码
 
 * 响应正确为
