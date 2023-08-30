@@ -25,7 +25,7 @@ xxxx 代表响应错误码
 
 错误码参见 
 
-https://github.com/shaosiji/wallet_doc/errorcode.md
+https://github.com/shaosiji/wallet_doc/blob/main/errorcode.md
 
 -------------------------------------------------------------------------------------------
 
