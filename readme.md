@@ -54,7 +54,7 @@ type | INT | YES | 交易类型 0 为全部，1为转入 ，2为转出|
 contract_address| STRING |NO | token地址，如果传空表示区块链的token地址|
 page |INT | YES | page  页号从1开始 |
 count |INT | YES | 每页数量 |
-wallet_name |STRING | YES | 区块链名称 |	 
+chain_id |STRING | YES | 区块链id |	 
 	
 **响应:**
 ```	
@@ -101,7 +101,7 @@ GET /api/v1/tokens
 ------------ | ------------ | ------------ | ------------
 page |INT | YES | page  页号从1开始 |
 count |INT | YES | 每页数量 |
-wallet_name |STRING | YES | 区块链名称 |	
+chain_id |STRING | YES | 区块链id |	
 
 **响应:**
 ```
@@ -238,7 +238,7 @@ GET /api/v1/rpcnodes
 ------------ | ------------ | ------------ | ------------
 page |INT | YES | page  页号从1开始 |
 count |INT | YES | 每页数量 |
-wallet_name |STRING | YES | 区块链名称 |	
+chain_id |STRING | YES | 区块链id |	
 
 **响应:**
 
