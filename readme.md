@@ -425,8 +425,8 @@ chain_id |STRING | YES | 区块链id |
         },	
         "list": [
                 {
-                    "name": "Binance Smart Chain", //token名称
-                    "symbol": "BNB",                //token代号
+                    "name": "Binance Smart Chain",  //全名
+                    "symbol": "BNB",                //token名称
                     "bl_symbol": "BNB",
                     "contract_address": ""          //合约地址
                 },
