@@ -62,10 +62,12 @@ wallet_name |STRING | YES | 区块链名称 |
 		"code": 10000,
 		"msg": "success",
 		"data": {
-			"pageNum": 1, 				//页号
-			"pageSize": 20, 			//每页数量
-			"totalPage": "1", 			//最大页数
-			"results": [{
+            "pages":{
+               "page": 20,//页号
+               "size": 1,//每页数量
+               "total": 1//最大页数
+            },		
+			"list": [{
 				"decimal": 18,
 				"fee": "0.000063",		//交易费用
 				"symbol": "BNB", 		//交易token名称
@@ -79,8 +81,8 @@ wallet_name |STRING | YES | 区块链名称 |
 				"hash": "0x39a68058fc4ba5e372194469b347ad5c0e0efcbaecafe3401be2284897a3fe0b",	//交易hash
 				"nonce": "0x2",			//随机数
 				"block_hash": "0xd86ade0086c4af632984467408738606c4a6d60e5f240ddf50eeb511e846c6a3", //区块hash
-				"from": "0x277d9d29c6ec9f89adeec153d96e273dab753eb6",		//转出地址
-				"to": "0x96ecced577d48850017d883e1cb543418da85702",		//转入地址
+				"from_addr": "0x277d9d29c6ec9f89adeec153d96e273dab753eb6",		//转出地址
+				"to_addr": "0x96ecced577d48850017d883e1cb543418da85702",		//转入地址
 				"addr_token": "",
 				"status": 1						//交易状态
 			}
@@ -107,10 +109,12 @@ wallet_name |STRING | YES | 区块链名称 |
 	"code": 10000,
 	"msg": "success",
 	"data": {
-		"pageNum": 1,
-		"pageSize": 100,
-		"totalPage": "1",
-		"results": [{
+        "pages":{
+           "page": 20,//页号
+           "size": 1,//每页数量
+           "total": 1//最大页数
+        },	
+		"list": [{
 			"hid": 899734962,
 			"blockchain_id": 1,	//区块链id
 			"blockchain": null,
@@ -170,10 +174,12 @@ count |INT | YES | 每页数量 |
 	"code": 10000,
 	"msg": "success",
 	"data": {
-		"pageNum": 1,		//页号
-		"pageSize": 20,		//每页数量
-		"totalPage": "1",	//最大页数
-		"results": [{
+        "pages":{
+           "page": 20,//页号
+           "size": 1,//每页数量
+           "total": 1//最大页数
+        },	
+		"list": [{
 			"title": "新app上架了",	//标题
 			"image_url": "http://image.com",	//图片地址
 			"jump_url": "http://jump.com",		//跳转url
@@ -204,10 +210,12 @@ count |INT | YES | 每页数量 |
 	"code": 10000,
 	"msg": "success",
 	"data": {
-		"pageNum": 1,		//页号
-		"pageSize": 20,		//每页数量
-		"totalPage": "1",	//最大页数
-		"results": [{
+        "pages":{
+           "page": 20,//页号
+           "size": 1,//每页数量
+           "total": 1//最大页数
+        },	
+		"list": [{
 			"title": "2023-08-30 update version",		//标题
 			"type": 0,
 			"txt": "see more at http://",				//内容
@@ -239,10 +247,12 @@ wallet_name |STRING | YES | 区块链名称 |
 	"code": 10000,
 	"msg": "success",
 	"data": {
-		"pageNum": 1,		//页号
-		"pageSize": 20,		//每页数量
-		"totalPage": "1",	//最大页数
-		"results": [{
+        "pages":{
+           "page": 20,//页号
+           "size": 1,//每页数量
+           "total": 1//最大页数
+        },	
+		"list": [{
 			"walletname": "ETH-HD",			//区块链名称
 			"chain_name": "以太坊节点1",	//节点名称
 			"rpc_url": "https://rpc.ankr.com/eth",	//rpc节点
@@ -272,10 +282,12 @@ symbol |STRING | NO | 查看指定的交易对，如果不传参表示查看所�
 	"code": 10000,
 	"msg": "success",
 	"data": {
-		"pageNum": 1, //页号
-		"pageSize": 1, //每页数量
-		"totalPage": "1", //最大页数
-		"results": [{
+        "pages":{
+           "page": 20,//页号
+           "size": 1,//每页数量
+           "total": 1//最大页数
+        },	
+		"list": [{
 			"symbol": "BTCUSDT",    //交易对
 			"price": "27407.43000000" //交易价格
 		}]
@@ -304,10 +316,12 @@ symbol |STRING | YES | 查看指定的交易对，多个交易对之间用逗号
 	"code": 10000,
 	"msg": "success",
 	"data": {
-		"pageNum": 1,
-		"pageSize": 1,
-		"totalPage": "1",
-		"results": [{
+        "pages":{
+           "page": 20,//页号
+           "size": 1,//每页数量
+           "total": 1//最大页数
+        },	
+		"list": [{
           "symbol":      "BNBUSDT",          // 交易对
           "openPrice":   "99.00000000",     // 间隔开盘价
           "highPrice":   "100.00000000",    // 间隔最高价
@@ -345,10 +359,12 @@ count |INT | YES | 每页数量 |
     "code": 10000,
     "msg": "success",
     "data": {
-        "pageNum": 1,
-        "pageSize": 1,
-        "totalPage": "4",
-        "results": [
+        "pages":{
+           "page": 20,//页号
+           "size": 1,//每页数量
+           "total": 1//最大页数
+        },	
+        "list": [
             {
                 "id": "BTC-HD",             //区块链id
                 "name": "Bitcoin",          //区块链名称

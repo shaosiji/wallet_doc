@@ -20,5 +20,4 @@ Bitcoin  | mainnet | https://still-distinguished-layer.btc.quiknode.pro/30665c63
 Ethereum  | mainnet | https://holy-quaint-asphalt.quiknode.pro/f7f688827571c9bab6b70ea314e77358334f03c7/ |
 Bnbchain  | mainnet | https://fluent-bitter-choice.bsc.quiknode.pro/64183d52268ae88e00998a17b0d08033c1532d03/ |
 Bnbchain  | mainnet | https://sparkling-fabled-patina.bsc.quiknode.pro/8a7493ea23005d46439da41759d19856ebb591f5/ |
- Nova | mainnet | https://wild-thrumming-wind.nova-mainnet.quiknode.pro/0a5f3c6f71bdda4dd165cdf35cb7e3e0af5d142f/ |
 
