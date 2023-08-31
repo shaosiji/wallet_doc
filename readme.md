@@ -253,7 +253,7 @@ chain_id |STRING | YES | 区块链id |
            "total": 1//最大页数
         },	
 		"list": [{
-			"walletname": "ETH-HD",			//区块链名称
+			"chain_id": "ETH-HD",			//区块链名称
 			"chain_name": "以太坊节点1",	//节点名称
 			"rpc_url": "https://rpc.ankr.com/eth",	//rpc节点
 			"icon": "",								//图标
@@ -375,14 +375,14 @@ count |INT | YES | 每页数量 |
                 "icon": "",                //图标
                 "nodes": [                  //rpc 节点列表
                     {
-                        "walletname": "BSC-HD",
+                        "chain_id": "BSC-HD",
                         "chain_name": "币按节点1",
                         "rpc_url": "https://fluent-bitter-choice.bsc.quiknode.pro/64183d52268ae88e00998a17b0d08033c1532d03/", //rpc 地址
                         "icon": "https://upload.wikimedia.org/wikipedia/commons/1/1c/BNB%2C_native_cryptocurrency_for_the_Binance_Smart_Chain.svg",
                         "remark": " "
                     },
                     {
-                        "walletname": "BSC-HD",
+                        "chain_id": "BSC-HD",
                         "chain_name": "币按节点2",
                         "rpc_url": "https://sparkling-fabled-patina.bsc.quiknode.pro/8a7493ea23005d46439da41759d19856ebb591f5/",
                         "icon": "https://upload.wikimedia.org/wikipedia/commons/1/1c/BNB%2C_native_cryptocurrency_for_the_Binance_Smart_Chain.svg",
