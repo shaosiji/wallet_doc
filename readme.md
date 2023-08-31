@@ -121,7 +121,7 @@ chain_id |STRING | YES | 区块链id |
 			"name": "HarryPotterObamaPacMan8Inu",
 			"symbol": "XRP",	//token名称
 			"bl_symbol": "XRP",	//token符号
-			"gas": 60000,		//gas
+			"gas": 60000,		//gas费用
 			"decimal": 8,
 			"precision": 8,
 			"balance": "",
@@ -129,7 +129,7 @@ chain_id |STRING | YES | 区块链id |
 			"percent_change_24h": 0,
 			"asset": 0,
 			"added": 0,
-			"address": "0x07e0edf8ce600fb51d44f51e3348d77d67f298ae",
+			"address": "0x07e0edf8ce600fb51d44f51e3348d77d67f298ae",  //合约地址
 			"owner_address": "",
 			"website": "",
 			"description": "HarryPotterObamaPacMan8Inu",
@@ -140,7 +140,7 @@ chain_id |STRING | YES | 区块链id |
 			"ti_link": "",
 			"token_status": 0,
 			"validated": 0,
-			"icon_url": "https://hk.tpstatic.net/token/tokenpocket-1692428812431.png",
+			"icon_url": "https://hk.tpstatic.net/token/tokenpocket-1692428812431.png",  //
 			"auto_add": 0,
 			"dapp_code": "",
 			"token_protocol": 0,
