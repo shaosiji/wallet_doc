@@ -373,7 +373,7 @@ count |INT | YES | 每页数量 |
                 "token_sort_name": "BTC",   
                 "remark": "",
                 "icon": "",                //图标
-                "nodes": [
+                "nodes": [                  //rpc 节点列表
                     {
                         "walletname": "BSC-HD",
                         "chain_name": "币按节点1",
