@@ -441,6 +441,106 @@ chain_id |STRING | YES | 区块链id |
 }
 
 ```
+
+-------------------------------------------------------------------------------------------
+
+###  查看所有币信息
+
+```
+GET /api/v1/coins
+```
+
+**参数:**
+	
+名称 | 类型 | 是否必须 | 描述
+------------ | ------------ | ------------ | ------------
+page |INT | YES | page  页号从1开始 |
+count |INT | YES | 每页数量 |	
+
+**响应:**
+
+```	
+	{
+	"code": 10000,
+	"msg": "success",
+	"data": {
+        "pages":{
+           "page": 20,//页号
+           "size": 1,//每页数量
+           "total": 1//最大页数
+        },	
+		"list": [{
+        			"id": "XRP",
+        			"name": "XRP",
+        			"name_cn": "瑞波币",
+        			"symbol": "XRP",
+        			"icon": "https://www.clipartmax.com/png/middle/35-359666_ripple-kurs-live-in-euro-und-dollar-ripple-icon-png.png"
+        		}, {
+        			"id": "Bitcoin",
+        			"name": "Bitcoin",
+        			"name_cn": "比特币",
+        			"symbol": "BTC",
+        			"icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1280px-Bitcoin.svg.png"
+        		}, {
+        			"id": "BitcoinCash",
+        			"name": "Bitcoin Cash",
+        			"name_cn": "比特币现金",
+        			"symbol": "BCH",
+        			"icon": "https://cdn4.iconfinder.com/data/icons/crypto-currency-and-coin-2/256/bitcoincash_bch_bitcoin-1024.png"
+        		}, {
+        			"id": "BNB",
+        			"name": "BNB",
+        			"name_cn": "币安币",
+        			"symbol": "BNB",
+        			"icon": "https://seeklogo.com/images/B/binance-coin-bnb-logo-97F9D55608-seeklogo.com.png"
+        		}, {
+        			"id": "Dogecoin",
+        			"name": "Dogecoin",
+        			"name_cn": "狗狗币",
+        			"symbol": "DOGE",
+        			"icon": "https://pngimg.com/uploads/doge_meme/doge_meme_PNG20.png"
+        		}, {
+        			"id": "Ethereum",
+        			"name": "Ethereum",
+        			"name_cn": "以太坊",
+        			"symbol": "ETH",
+        			"icon": "https://cdn.pixabay.com/photo/2021/05/24/09/15/ethereum-6278326_1280.png"
+        		}, {
+        			"id": "Litecoin",
+        			"name": "Litecoin",
+        			"name_cn": "莱特币",
+        			"symbol": "LTC",
+        			"icon": "https://www.spectre.ai/assets/images/assets/LTC-logo.png"
+        		}, {
+        			"id": "Polygon",
+        			"name": "Polygon",
+        			"name_cn": "Polygon",
+        			"symbol": "MATIC",
+        			"icon": "https://assets-cdn.trustwallet.com/blockchains/polygon/info/logo.png"
+        		}, {
+        			"id": "TetherUSDt",
+        			"name": "Tether USDt",
+        			"name_cn": "泰达币",
+        			"symbol": "USDT",
+        			"icon": "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/256/Tether-USDT-icon.png"
+        		}, {
+        			"id": "TRON",
+        			"name": "TRON",
+        			"name_cn": "波场币",
+        			"symbol": "TRX",
+        			"icon": "https://cryptologos.cc/logos/tron-trx-logo.png"
+        		}, {
+        			"id": "USDCoin",
+        			"name": "USD Coin",
+        			"name_cn": "USDC",
+        			"symbol": "USDC",
+        			"icon": "https://cryptologos.cc/logos/usd-coin-usdc-logo.png"
+        	}]
+	}
+}
+
+```
+
 -------------------------------------------------------------------------------------------
 
 
