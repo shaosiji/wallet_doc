@@ -372,7 +372,23 @@ count |INT | YES | 每页数量 |
                 "token_name": "BTC",        //token名称
                 "token_sort_name": "BTC",   
                 "remark": "",
-                "icon": ""                  //图标
+                "icon": "",                //图标
+                "nodes": [
+                    {
+                        "walletname": "BSC-HD",
+                        "chain_name": "币按节点1",
+                        "rpc_url": "https://fluent-bitter-choice.bsc.quiknode.pro/64183d52268ae88e00998a17b0d08033c1532d03/", //rpc 地址
+                        "icon": "https://upload.wikimedia.org/wikipedia/commons/1/1c/BNB%2C_native_cryptocurrency_for_the_Binance_Smart_Chain.svg",
+                        "remark": " "
+                    },
+                    {
+                        "walletname": "BSC-HD",
+                        "chain_name": "币按节点2",
+                        "rpc_url": "https://sparkling-fabled-patina.bsc.quiknode.pro/8a7493ea23005d46439da41759d19856ebb591f5/",
+                        "icon": "https://upload.wikimedia.org/wikipedia/commons/1/1c/BNB%2C_native_cryptocurrency_for_the_Binance_Smart_Chain.svg",
+                        "remark": " "
+                    }
+                ]
             }
         ]
     }
