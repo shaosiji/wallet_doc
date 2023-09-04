@@ -543,6 +543,108 @@ count |INT | YES | 每页数量 |
 
 -------------------------------------------------------------------------------------------
 
+### 获取dapp所有分组
+
+
+```
+GET /api/v1/dapptypes
+```
+**参数:**
+名称 | 类型 | 是否必须 | 描述
+------------ | ------------ | ------------ | ------------
+page |INT | YES | page  页号从1开始 |
+count |INT | YES | 每页数量 |
+
+**响应:**
+```
+{
+    "code": 10000,
+    "msg": "success",
+    "data": {
+        "pages": {
+            "page": 1,
+            "size": 10,
+            "total": 1
+        },
+        "list": [
+            {
+                "type": "hot", //分组id
+                "name": "热门" //分组名称
+            },
+            {
+                "type": "new",
+                "name": "新品"
+            },
+            {
+                "type": "nft",
+                "name": "NFT"
+            },
+            {
+                "type": "bsc",
+                "name": "BSC"
+            },
+            {
+                "type": "defi",
+                "name": "DeFi"
+            },
+            {
+                "type": "polygon",
+                "name": "polygon"
+            }
+        ]
+    }
+}
+
+```
+
+-------------------------------------------------------------------------------------------
+
+### 获取dapp所有分组
+
+
+```
+GET /api/v1/dapptypes
+```
+**参数:**
+名称 | 类型 | 是否必须 | 描述
+------------ | ------------ | ------------ | ------------
+page |INT | YES | page  页号从1开始 |
+count |INT | YES | 每页数量 |
+type |STRING | YES | 分组id | 
+
+
+**响应:**
+```
+{
+    "code": 10000,
+    "msg": "success",
+    "data": {
+        "pages": {
+            "page": 1,
+            "size": 10,
+            "total": 1
+        },
+        "list": [
+            {
+                "type": "bsc",  //分组id
+                "name": "bsc1", //dapp名称
+                "url": "https://mempool.space/", //dapp地址
+                "icon": "https://hk.tpstatic.net/token/tokenpocket-1654746200716.png" //dapp icon地址
+            },
+            {
+                "type": "bsc",
+                "name": "bsc2",
+                "url": "https://mempool.space/",
+                "icon": "https://hk.tpstatic.net/token/tokenpocket-1654746200716.png"
+            }
+        ]
+    }
+}
+
+```
+
+-------------------------------------------------------------------------------------------
+
 
 附录 
 
