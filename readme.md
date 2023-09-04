@@ -603,7 +603,7 @@ count |INT | YES | 每页数量 |
 
 
 ```
-GET /api/v1/dapptypes
+GET /api/v1/dapps
 ```
 **参数:**
 名称 | 类型 | 是否必须 | 描述
