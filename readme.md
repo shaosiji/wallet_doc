@@ -629,13 +629,15 @@ type |STRING | YES | 分组id |
                 "type": "bsc",  //分组id
                 "name": "bsc1", //dapp名称
                 "url": "https://mempool.space/", //dapp地址
-                "icon": "https://hk.tpstatic.net/token/tokenpocket-1654746200716.png" //dapp icon地址
+                "icon": "https://hk.tpstatic.net/token/tokenpocket-1654746200716.png", //dapp icon地址
+                "remark": "薄饼app"                                                   //描述信息
             },
             {
                 "type": "bsc",
                 "name": "bsc2",
                 "url": "https://mempool.space/",
-                "icon": "https://hk.tpstatic.net/token/tokenpocket-1654746200716.png"
+                "icon": "https://hk.tpstatic.net/token/tokenpocket-1654746200716.png",
+                "remark": "薄饼app"
             }
         ]
     }
