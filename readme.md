@@ -373,6 +373,7 @@ count |INT | YES | 每页数量 |
                 "token_sort_name": "BTC",   
                 "remark": "",
                 "icon": "",                //图标
+                "cross_chain_name": "",                //跨链名称
                 "nodes": [                  //rpc 节点列表
                     {
                         "chain_id": "BSC-HD",
