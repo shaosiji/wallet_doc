@@ -644,9 +644,134 @@ type |STRING | YES | 分组id |
 }
 
 ```
+-------------------------------------------------------------------------------------------
+###查看市场分组
+
+```
+GET /api/v1/marketclass
+```
+
+**参数:**
+	
+ 无
+
+**响应:**
+
+```	
+	{
+        "code": 10000,
+        "msg": "success",
+        "data": {
+            "pages": {
+                "page": 1,
+                "size": 10,
+                "total": 1
+            },
+            "list": [
+                {
+                    "class": "hot",  //分组名称
+                    "title": "热门" //显示名称
+                },
+                {
+                    "class": "gainers",
+                    "title": "涨幅榜"
+                },
+                {
+                    "class": "losers",
+                    "title": "跌幅榜"
+                },
+                {
+                    "class": "meme",
+                    "title": "Meme"
+                },
+                {
+                    "class": "Arb",
+                    "title": "Arb"
+                },
+                {
+                    "class": "OP",
+                    "title": "OP"
+                },
+                {
+                    "class": "defi",
+                    "title": "DeFi"
+                },
+                {
+                    "class": "nft",
+                    "title": "NFT"
+                },
+                {
+                    "class": "gamefi",
+                    "title": "GameFi"
+                },
+                {
+                    "class": "metaverse",
+                    "title": "Metaverse"
+                }
+            ]
+        }
+    }
+
+```
+-------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------------
+###查看市场币种价格,24小时内
 
+```
+GET /api/v1/marketlist
+```
+
+**参数:**
+	
+名称 | 类型 | 是否必须 | 描述
+------------ | ------------ | ------------ | ------------
+class |STRING | YES | 分组id，默认为hot |	
+
+**响应:**
+
+```{
+       "code": 10000,
+       "msg": "success",
+       "data": {
+           "pages": {
+               "page": 1,
+               "size": 50,
+               "total": 1
+           },
+           "list": [
+               {
+                   "blockchain_id": 1,
+                   "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+                   "chain_id": "ETH",                   //网络id
+                   "icon": "https://hk.tpstatic.net/token/tokenpocket-1617349051539.png",   //图标
+                   "name": "Wrapped Ether",             //token名称
+                   "symbol": "ETH",                     //token符号
+                   "status": 0,
+                   "pair": "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640",
+                   "price_usd": 1645.752200486269,      //当前价格
+                   "volume": 157572816.219058,          //交易量
+                   "chg": 0.0046                        //改变区间，如果要显示百分比需要乘以100
+               },
+               {
+                   "blockchain_id": 24,
+                   "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+                   "chain_id": "ARB",
+                   "icon": "https://hk.tpstatic.net/token/tokenpocket-1617349051539.png",
+                   "name": "Wrapped Ether",
+                   "symbol": "ETH",
+                   "status": 0,
+                   "pair": "0xc31e54c7a869b9fcbecc14363cf510d1c41fa443",
+                   "price_usd": 1644.3167717528374,
+                   "volume": 29448748.241987,
+                   "chg": 0.0049
+               }
+           ]
+       }
+   }
+
+```
+-------------------------------------------------------------------------------
 
 附录 
 
