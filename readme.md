@@ -167,6 +167,7 @@ GET /api/v1/banners
 ------------ | ------------ | ------------ | ------------
 page |INT | YES | page  页号从1开始 |
 count |INT | YES | 每页数量 |	
+lang |STRING| NO |语言信息。默认不传为 zh-CN(中文),英文为 en|
 
 **响应:**
 	
