@@ -352,7 +352,7 @@ GET /api/v1/chains
 ------------ | ------------ | ------------ | ------------
 page |INT | YES | page  页号从1开始 |
 count |INT | YES | 每页数量 |
-
+address |STRING | YES | 钱包地址 |
 **响应:**
 ```
 {
