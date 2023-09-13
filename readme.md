@@ -458,6 +458,8 @@ GET /api/v1/coins
 ------------ | ------------ | ------------ | ------------
 page |INT | YES | page  页号从1开始 |
 count |INT | YES | 每页数量 |	
+symbol |STRING | NO | 币种信息，btc比特币,noc nova,eth 以太币,不传值表示查询所有币种 |
+
 
 **响应:**
 
