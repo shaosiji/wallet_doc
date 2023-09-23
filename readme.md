@@ -954,6 +954,57 @@ POST /api/v2/tronsign
 }
 ```
 -------------------------------------------------------------------------------------------
+
+### 波场创建智能合约
+
+```
+POST /api/v2/createtransfer
+```
+参数  
+
+```
+{
+    "contractAddress":"TDk91SWz2GvwfZwMTGX21d4ngUUH8YZZAv", //合约地址
+    "toAddress":"TUbQqrynqJXCMSSTCxKavspWTyWHE8edhd",		//接收地址
+    "amount":1												//金额
+}
+```
+	
+
+**响应:**
+```
+{
+    "code": 10000,
+    "message": "ok",
+    "data": { //data就是transaction，用这个去做签名 和广播
+        "visible": false,
+        "txID": "c3ecdb60a039684c93ccbc7bdee738ef8d6f2217ad652f366e5850f8f8ace158",
+        "raw_data": {
+            "contract": [
+                {
+                    "parameter": {
+                        "value": {
+                            "data": "a9059cbb000000000000000000000000cc4b1f9ba729d82ce9c317f6bfd1fdbe497ae7cf0000000000000000000000000000000000000000000000000000000000000001",
+                            "owner_address": "41cc4b1f9ba729d82ce9c317f6bfd1fdbe497ae7cf",
+                            "contract_address": "412967c318a01cb50eb1f5bb99943b01012ad758f1"
+                        },
+                        "type_url": "type.googleapis.com/protocol.TriggerSmartContract"
+                    },
+                    "type": "TriggerSmartContract"
+                }
+            ],
+            "ref_block_bytes": "4ff6",
+            "ref_block_hash": "ac23793feac20585",
+            "expiration": 1695449850000,
+            "fee_limit": 150000000,
+            "timestamp": 1695449792821
+        },
+        "raw_data_hex": "0a024ff62208ac23793feac205854090c1be85ac315aae01081f12a9010a31747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e54726967676572536d617274436f6e747261637412740a1541cc4b1f9ba729d82ce9c317f6bfd1fdbe497ae7cf1215412967c318a01cb50eb1f5bb99943b01012ad758f12244a9059cbb000000000000000000000000cc4b1f9ba729d82ce9c317f6bfd1fdbe497ae7cf000000000000000000000000000000000000000000000000000000000000000170b582bb85ac31900180a3c347"
+    }
+}
+```
+-------------------------------------------------------------------------------------------
+
 附录 
 
 市场行业 币安公开的接口 无需认证 
