@@ -1303,18 +1303,14 @@ POST /api/v2/tron/approve/check
 ```
 POST /api/v2/tron/doswap
 ```
-参数  
+**参数:**
 
-```
-{
-    "prikey":"",                                            //私钥，要进行aes加密
-    "amount":"130000"                                       //转出金额
-    ,"from_token":"TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t"      //转出token
-    ,"to_token":"THb4CqiFdwNHsWsQCs4JhzwjMWys4aqCbF"        //转入token 
-    ,"owner_address":"TM3gzrNFp6G3481fMukD3gyDfZuprm4dLY"   //钱包地址
-    ,"limit":238591700                                      //最大费用
-}
-```
+名称 | 类型 | 是否必须 | 描述
+------------ | ------------ | ------------ | ------------
+address | STRING | YES |钱包地址|
+token_address| STRING |NO | token地址，如果有多个资产之间用逗号隔开，如果不传表示只同步区块链的原生货币信息|
+chain_id |STRING | YES | 区块链id |	 
+
 	
 **响应:**
 ```
@@ -1324,6 +1320,105 @@ POST /api/v2/tron/doswap
     "data": "" //返回的交易hash 用于查账
 }
 ```
+-------------------------------------------------------------------------------------------
+
+### 同步区块链交易信息
+
+```
+POST /api/v1/syntransnotice
+```
+**参数:**  
+
+名称 | 类型 | 是否必须 | 描述
+------------ | ------------ | ------------ | ------------
+page |INT | YES | page  页号从1开始 |
+count |INT | YES | 每页数量 |
+address | STRING | YES |钱包地址|
+chain_id |STRING | YES | 区块链id |	
+
+	
+**响应:**
+```
+{
+    "code": 10000,
+    "message": "ok",
+    "data": {}
+}
+```
+-------------------------------------------------------------------------------------------
+
+### 获得区块链交易信息
+
+```
+POST /api/v1/gettransnotice
+```
+参数  
+	
+名称 | 类型 | 是否必须 | 描述
+------------ | ------------ | ------------ | ------------
+page |INT | YES | page  页号从1开始 |
+count |INT | YES | 每页数量 |
+address | STRING | YES |钱包地址|
+chain_id |STRING | YES | 区块链id |
+
+**响应:**
+```
+{
+    {
+        "code": 10000,
+        "msg": "success",
+        "data": {
+            "pages": {
+                "page": 1,
+                "size": 10,
+                "total": 2
+            },
+            "list": [
+                {
+                    "ID": 6,                                                    //数据库对应的id
+                    "ChainID": "BSC-HD",                                        //区块链id
+                    "Address": "0x277d9d29C6EC9f89aDeec153D96e273dab753eB6",    //钱包地址
+                    "Hash": "0x104911fb984c924a2052c864afca085c84dc4f5d80b12110947435f3ed063640",   //交易hash
+                    "Symbol": "BNB",    //交易的币种
+                    "TokenAddress": "", //合约地址，为空表示原生代币
+                    "FromAddress": "0x161ba15a5f335c9f06bb5bbb0a9ce14076fbb645",    //转出地址
+                    "ToAddress": "0x277d9d29c6ec9f89adeec153d96e273dab753eb6",      //转入地址
+                    "Amount": 139500000000000000,                                   //交易金额
+                    "CreateTime": "2023-10-10 08:55:00",                            //创建时间
+                    "UpdateTime": "2023-10-20 10:36:54",                        
+                    "Status": 0,                                                    //状态 0表示维度，1表示已读
+                    "BlockNum": 32477078,                                           //区块号
+                    "Decimal": 18                                                   //小数点
+                }
+            ]
+        }
+    }
+}
+```
+-------------------------------------------------------------------------------------------
+
+### 设置转账消息已读状态
+
+```
+POST /api/v1/settransnotice
+```
+参数  
+	
+名称 | 类型 | 是否必须 | 描述
+------------ | ------------ | ------------ | ------------
+address | STRING | YES |钱包地址|
+chain_id |STRING | YES | 区块链id |	
+ids|STRING|YES| 消息id，多个id用逗号分割，如果不传id表示设置全部已读 |	
+	
+**响应:**
+```
+{
+    "code": 10000,
+    "message": "ok",
+    "data": {}
+}
+```
+
 -------------------------------------------------------------------------------------------
 
 附录 
